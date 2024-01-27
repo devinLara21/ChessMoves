@@ -1,7 +1,15 @@
 
 class Main{
    public static void main(String[] args){
-        System.out.println("Hello World ");
-        System.out.println(" this is to see if it changed the git thingy");
+      
    }
+   public static boolean isValidSquare(int row, int col){
+      return row >= 0 && row < 8 && col >= 0 && col < 8;
+   }
+
+   
+   public static boolean isRookMoveValid(String a, int b){
+     
+   
+      }
 } 
