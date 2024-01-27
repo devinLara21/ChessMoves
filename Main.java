@@ -2,15 +2,17 @@
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.print.DocFlavor.CHAR_ARRAY;
-
 import java.lang.Character;
 
 
 class Main{
    public static void main(String[] args){
-      isValidSquare()
-     
+      Map<Character,Integer> fileMap = getFileMap();
+
+      isValidSquare(fileMap, "b", 3);
+      isRookMoveValid(fileMap, isValidSquare(fileMap, "b", 3), null, null, "A", 7, "A", 4);
+      
+
    }
    public static Map<Character, Integer> getFileMap(){
       Map<Character,Integer> map = new HashMap<>();
