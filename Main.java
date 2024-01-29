@@ -10,10 +10,11 @@ class Main{
       Map<Character,Integer> fileMap = getFileMap();
 
       isValidSquare(fileMap, "b", 3);
-      isRookMoveValid(fileMap, isValidSquare(fileMap, "b", 3), null, null, "A", 7, "A", 4);
+      isRookMoveValid(fileMap, isValidSquare(fileMap, "b", 3), null, null, "e", 5, "f", 7);
       
 
    }
+   // this is going to be a test
    public static Map<Character, Integer> getFileMap(){
       Map<Character,Integer> map = new HashMap<>();
         map.put('a', 0);
@@ -36,12 +37,11 @@ class Main{
          return false;
       }
    }
+
+
    public static boolean isRookMoveValid(Map<Character, Integer>fileMap, boolean isValidSquare,String piece, String color, String newPosX, int newPosY, String currPosX, int currPosY){
       int curr_PosX = fileMap.get(Character.toLowerCase(currPosX.charAt(0)));
       int new_PosX = fileMap.get(Character.toLowerCase(newPosX.charAt(0)));
-      //int[][] curr_postion = new int [curr_PosX][currPosY];
-      //int[][] old_postion = new int [new_PosX][newPosY];
-      
       if(isValidSquare){
          if(curr_PosX == new_PosX || currPosY == newPosY){
             System.out.println(" Rook CAN move to " + newPosX + "," + newPosY);
